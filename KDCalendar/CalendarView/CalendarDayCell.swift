@@ -56,11 +56,11 @@ open class CalendarDayCell: UICollectionViewCell {
         if isSelected {
             self.textLabel.textColor = style.cellSelectedTextColor
         }
-        else if isToday {
-            self.textLabel.textColor = style.cellTextColorToday
-        }
         else if isOutOfRange {
             self.textLabel.textColor = style.cellColorOutOfRange
+        }
+        else if isToday {
+            self.textLabel.textColor = style.cellTextColorToday
         }
         else if isAdjacent {
             self.textLabel.textColor = style.cellColorAdjacent
