@@ -111,6 +111,7 @@ open class CalendarDayCell: UICollectionViewCell {
                 self.bgView.layer.borderColor = style.cellSelectedBorderColor.cgColor
                 self.bgView.layer.borderWidth = style.cellSelectedBorderWidth
                 self.bgView.backgroundColor = style.cellSelectedColor
+                self.dotsView.backgroundColor = style.cellSelectedEventColor
             case false:
                 self.bgView.layer.borderColor = style.cellBorderColor.cgColor
                 self.bgView.layer.borderWidth = style.cellBorderWidth
@@ -119,6 +120,7 @@ open class CalendarDayCell: UICollectionViewCell {
                 } else {
                     self.bgView.backgroundColor = style.cellColorDefault
                 }
+                self.dotsView.backgroundColor = style.cellEventColor
             }
             
             updateTextColor()
@@ -130,6 +132,7 @@ open class CalendarDayCell: UICollectionViewCell {
         self.bgView.layer.borderColor = style.cellBorderColor.cgColor
         self.bgView.layer.borderWidth = style.cellBorderWidth
         self.bgView.backgroundColor = style.cellColorDefault
+        self.dotsView.backgroundColor = style.cellEventColor
         self.textLabel.textColor = style.cellTextColorDefault
         self.eventsCount = 0
     }
