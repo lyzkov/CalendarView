@@ -67,8 +67,10 @@ extension CalendarView {
         public var weekdaysFont                   = UIFont.systemFont(ofSize: 14) // Used for days of the week
         
         //Common
-        public var cellShape                 = CellShapeOptions.bevel(4.0)
-        public var cellLabelInsets           = UIEdgeInsets(top: 0, left: 0, bottom: 8.0, right: 0)
+        public var cellShape                              = CellShapeOptions.bevel(4.0)
+        public var cellBackgroundHorizontalRatio: CGFloat = 1.0
+        public var cellBackgroundVerticalRatio: CGFloat   = 1.0
+        public var cellLabelInsets                        = UIEdgeInsets(top: 0, left: 0, bottom: 8.0, right: 0)
         
         public var firstWeekday              = FirstWeekdayOptions.monday
         public var showAdjacentDays          = false

@@ -180,7 +180,10 @@ open class CalendarDayCell: UICollectionViewCell {
             )
         }
         
-        self.bgView.frame           = elementsFrame
+        self.bgView.frame           = elementsFrame.insetBy(
+            dx: elementsFrame.width * (1.0 - style.cellBackgroundHorizontalRatio),
+            dy: elementsFrame.height * (1.0 - style.cellBackgroundVerticalRatio)
+        )
         self.textLabel.frame        = elementsFrame.inset(by: style.cellLabelInsets)
         
         let size                            = self.bounds.height * style.cellEventDotPercentage // always a percentage of the whole cell
