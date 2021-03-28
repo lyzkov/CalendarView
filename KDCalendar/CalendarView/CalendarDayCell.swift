@@ -181,11 +181,11 @@ open class CalendarDayCell: UICollectionViewCell {
         }
         
         self.bgView.frame           = elementsFrame
-        self.textLabel.frame        = elementsFrame
+        self.textLabel.frame        = elementsFrame.inset(by: style.cellLabelInsets)
         
-        let size                            = self.bounds.height * 0.08 // always a percentage of the whole cell
+        let size                            = self.bounds.height * style.cellEventDotPercentage // always a percentage of the whole cell
         self.dotsView.frame                 = CGRect(x: 0, y: 0, width: size, height: size)
-        self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.bounds.height - (2.5 * size))
+        self.dotsView.center                = CGPoint(x: self.textLabel.center.x, y: self.textLabel.frame.maxY + self.textLabel.font.descender)
         self.dotsView.layer.cornerRadius    = size * 0.5 // round it
         
         switch style.cellShape {

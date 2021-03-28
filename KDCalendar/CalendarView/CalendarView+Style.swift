@@ -50,6 +50,7 @@ extension CalendarView {
         //Event
         public var cellEventColor                   = UIColor(red: 254.0/255.0, green: 73.0/255.0, blue: 64.0/255.0, alpha: 0.8)
         public var cellSelectedEventColor           = UIColor(red: 254.0/255.0, green: 73.0/255.0, blue: 64.0/255.0, alpha: 0.8)
+        public var cellEventDotPercentage: CGFloat  = 0.08
         
         //Header
         public var headerHeight: CGFloat     = 80.0
@@ -67,6 +68,7 @@ extension CalendarView {
         
         //Common
         public var cellShape                 = CellShapeOptions.bevel(4.0)
+        public var cellLabelInsets           = UIEdgeInsets(top: 0, left: 0, bottom: 8.0, right: 0)
         
         public var firstWeekday              = FirstWeekdayOptions.monday
         public var showAdjacentDays          = false
